@@ -1,7 +1,7 @@
 const button = document.querySelector('.advice__dice')
 const loading = document.querySelector('.advice__loading')
 const quote = document.querySelector('.advice__quote')
-const quote_id = document.querySelector('.advice__number--id')
+const quote_id = document.querySelector('.advice__number')
 const apiurl = 'https://api.adviceslip.com/advice'
 
 var clicked = false
@@ -39,7 +39,7 @@ async function getapi() {
 
 // The function who changes the id and the advice
 function change(data) {
-	quote_id.innerHTML = data.slip.id
+	quote_id.innerHTML = 'ADVICE #' + data.slip.id
 	quote.innerHTML = data.slip.advice
 }
 

@@ -67,6 +67,7 @@ body {
   justify-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: "Manrope", sans-serif;
 }
 
 a {
@@ -75,7 +76,6 @@ a {
 
 .advice {
   position: relative;
-  font-family: "Manrope", sans-serif;
   color: #cee3e9;
   background: #323a49;
   text-align: center;
@@ -84,6 +84,7 @@ a {
   margin-bottom: 30px;
   border-radius: 13px;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+  font-weight: 800;
 }
 .advice__number {
   color: #52ffa8;
@@ -97,9 +98,6 @@ a {
   width: calc(100% - 96px);
   height: calc(100% - 96px - 30px);
   visibility: hidden;
-}
-.advice__loading svg circle {
-  stroke: #cee3e9;
 }
 .advice__quote {
   font-size: 28px;
@@ -116,21 +114,15 @@ a {
   position: relative;
 }
 .advice__divider {
-  padding-top: 20px;
-}
-.advice__divider--long {
-  display: none;
-}
-@media screen and (min-width: 580px) {
-  .advice__divider--long {
-    display: initial;
-  }
-  .advice__divider--short {
-    display: none;
-  }
+  margin-top: 20px;
+  background-image: url(../images/pattern-divider-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 16px;
 }
 .advice__dice {
   position: relative;
+  border: none;
   width: 64px;
   aspect-ratio: 1;
   background-color: #52ffa8;
@@ -146,6 +138,7 @@ a {
 .advice__dice:hover {
   box-shadow: 0 0 30px #52ffa8;
   transition: 0.15s ease;
+  cursor: pointer;
 }
 .advice__dice:active {
   transform: translate3d(0, 50%, 0) scale(0.9);
@@ -156,5 +149,18 @@ a {
 }
 
 .attribution {
-  display: none;
+  position: absolute;
+  bottom: 2rem;
+  margin: 0 1rem;
+  text-align: center;
+  color: #cee3e9;
+  line-height: 1.6;
+}
+.attribution a {
+  color: #4e5d73;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+.attribution a:hover {
+  color: #52ffa8;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
 }
