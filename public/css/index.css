@@ -59,12 +59,10 @@ body {
 
 .container {
   background: #1f2632;
-  position: absolute;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: "Manrope", sans-serif;
